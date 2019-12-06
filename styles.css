@@ -3,7 +3,7 @@
     width: 180px;
     height: 265px;
     border: 1px solid #f1f1f1;
-    perspective: 1000px; /* Remove this if you don't want the 3D effect */
+    perspective: 1000px;
 }
 
 .flip-card-inner {
@@ -14,7 +14,7 @@
     transition: transform 0.8s;
     transform-style: preserve-3d;
 }
-.flip-card:hover .flip-card-inner {
+ .flip-card .flip-card-inner {
     transform: rotateY(180deg);
 }
 .flip-card-front, .flip-card-back {
@@ -23,10 +23,13 @@
     height: 100%;
     backface-visibility: hidden;
 }
-
+.flip-card-front {
+    background-color: #bbb;
+    color: black;
+}
 
 .flip-card-back {
-    background-image: url("./img/tuzchervei.png");
+    background-color: transparent;
     color: white;
     transform: rotateY(180deg);
 }
